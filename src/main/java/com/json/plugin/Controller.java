@@ -17,5 +17,3 @@ public class Controller {
         return Response.ok(params).build();
     }
 }
-
-//@FormParam("issue") String issue, @FormParam("description") String description
