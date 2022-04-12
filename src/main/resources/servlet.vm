@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <meta name="decorator" content="atl.general"/>
+        <title>
+            Servlet
+        </title>
+    </head>
+    <body>
+        <div> $json </div>
+    </body>
+</html>
