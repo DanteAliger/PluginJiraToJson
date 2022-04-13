@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
 
-@Scanned
+//@Scanned
 public class IssueCRUD extends HttpServlet{
 
     private static final String TEMPLATE= "servlet.vm";
@@ -40,9 +40,7 @@ public class IssueCRUD extends HttpServlet{
         MutableIssue issue = Optional.ofNullable(issueService.getIssue(user, req.getParameter("key")).getIssue()).orElseThrow(IllegalArgumentException::new);
         Map<String, Object> context = Maps.newHashMap();
         context.put("json",toJson(issue));
-        resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().write(this.velocityManager.getEncodedBody("/",TEMPLATE,"UTF-8", context));
-        resp.getWriter().write(req.getContextPath());
         resp.getWriter().close();
     }
 
