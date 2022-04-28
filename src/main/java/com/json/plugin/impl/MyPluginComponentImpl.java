@@ -18,6 +18,7 @@ public class MyPluginComponentImpl implements MyPluginComponent
         if(null != applicationProperties)
         {
             return "myComponent:" + applicationProperties.getDisplayName();
+            // delete commit
         }
         
         return "myComponent";
